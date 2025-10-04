@@ -17,6 +17,8 @@ double sort(int* array, int size, char* alg) {
         selection_sort(array, size);
     else if (string_equal(alg, "insertion"))
         insertion_sort(array, size);
+    else if (string_equal(alg, "shell"))
+        shell_sort(array, size);
     else {
         fprintf(stderr, "ERROR: invalid algorithm: %s\n", alg);
         exit(EXIT_FAILURE);

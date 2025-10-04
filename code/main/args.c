@@ -18,11 +18,12 @@ void validate_args(int argc, char* argv[]) {
         printf("num_amount: amount of numbers the program will receive.\n");
         printf("input_file: file that contains the array (text, values separated by newline).\n");
         printf("output_file: file that will receive the sorted array.\n");
-        printf("\nalgorithm  complexity    max*\n");
-        printf("bogo       n  | n! | ∞        12\n");
-        printf("bubble     n  | n² | n²   50,000\n");
-        printf("selection  n² | n² | n²  100,000\n");
-        printf("insertion  n  | n² | n²  100,000\n");
+        printf("\nalgorithm  complexity                max*\n");
+        printf("bogo       n  | n!     | ∞             12\n");
+        printf("bubble     n  | n²     | n²        50,000\n");
+        printf("selection  n² | n²     | n²       100,000\n");
+        printf("insertion  n  | n²     | n²       100,000\n");
+        printf("shell      n  | n*logn | n^1.5  1,000,000\n");
         printf("\n*recommended maximum array size, to avoid taking forever.\n");
         exit(EXIT_NOTHING);
     }
