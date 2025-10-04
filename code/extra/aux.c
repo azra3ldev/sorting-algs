@@ -1,0 +1,38 @@
+#include "aux.h"
+
+// this is a file with auxiliary functions that will be shared with many files.
+// it doesn't have a main() function, it's meant to be used with other source files.
+
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int* read_array(int size, FILE* input_src) {
+    int* array = (int*) malloc(size * sizeof(int));
+
+    for (int i = 0; i < size; i++) {
+        fscanf(input_src, "%d", &array[i]);
+    }
+
+    return array;
+}
+
+void print_array(int* array, int size, FILE* output_dst) {
+    for (int i = 0; i < size; i++)
+        fprintf(output_dst, "%d\n", array[i]);
+}
+
+bool is_sorted(int* array, int size) {
+    for (int i = 0; i < size - 1; i++) {
+        if (array[i] > array[i+1])
+            return false;
+    }
+
+    return true;
+}
+
+bool string_equal(char* s1, char* s2) {
+    return strcmp(s1, s2) == 0;
+}
