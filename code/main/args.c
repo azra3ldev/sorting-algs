@@ -17,14 +17,17 @@ void validate_args(int argc, char* argv[]) {
         printf("usage: " NAME " <algorithm> <num_amount> <input_file> <output_file>\n\n");
         printf("num_amount: amount of numbers the program will receive.\n");
         printf("input_file: file that contains the array (text, values separated by newline).\n");
-        printf("output_file: file that will receive the sorted array.\n");
-        printf("\nalgorithm  complexity                max*\n");
-        printf("bogo       n  | n!     | ∞             12\n");
-        printf("bubble     n  | n²     | n²        50,000\n");
-        printf("selection  n² | n²     | n²       100,000\n");
-        printf("insertion  n  | n²     | n²       100,000\n");
-        printf("shell      n  | n*logn | n^1.5  1,000,000\n");
-        printf("\n*recommended maximum array size, to avoid taking forever.\n");
+        printf("output_file: file that will receive the sorted array.\n\n");
+        printf("algorithm  |  best  | medium | worst*|        max**\n");
+        printf("-----------|--------|--------|-------|-----------\n");
+        printf("bogo       |     n  |     n! |     ∞ |         12\n");
+        printf("bubble     |     n  |     n² |    n² |     50,000\n");
+        printf("selection  |     n² |     n² |    n² |    100,000\n");
+        printf("insertion  |     n  |     n² |    n² |    100,000\n");
+        printf("shell      | n*logn |  n^1.5 | n^1.5 |  1,000,000\n");
+        printf("quick      | n*logn | n*logn |   n^2 | 10,000,000\n\n");
+        printf("*complexity in big o notation.\n");
+        printf("**recommended maximum array size, to avoid taking forever.\n");
         exit(EXIT_NOTHING);
     }
     if (argc == 2 && (string_equal(argv[1], "--version") ||string_equal(argv[1], "-v"))) {
