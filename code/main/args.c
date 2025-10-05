@@ -20,13 +20,14 @@ void validate_args(int argc, char* argv[]) {
         printf("output_file: file that will receive the sorted array.\n\n");
         printf("algorithm  |  best  | medium |  worst*|        max**\n");
         printf("-----------|--------|--------|--------|-----------\n");
-        printf("bogo       |     n  |     n! |      ∞ |         12\n");
-        printf("bubble     |     n  |     n² |     n² |     50,000\n");
+        printf("bogo       |      n |     n! |      ∞ |         12\n");
+        printf("bubble     |      n |     n² |     n² |     50,000\n");
         printf("selection  |     n² |     n² |     n² |    100,000\n");
-        printf("insertion  |     n  |     n² |     n² |    100,000\n");
+        printf("insertion  |      n |     n² |     n² |    100,000\n");
         printf("shell      | n*logn | n*logn |  n^1.5 |  1,000,000\n");
         printf("quick      | n*logn | n*logn |    n^2 |  1,000,000\n");
-        printf("merge      | n*logn | n*logn | n*logn |  1,000,000\n\n");
+        printf("merge      | n*logn | n*logn | n*logn |  1,000,000\n");
+        printf("counting   |     2n |     2n |     2n |  5,000,000\n\n");
         printf("*complexity in big o notation.\n");
         printf("**recommended maximum array size, to avoid taking forever.\n");
         exit(EXIT_NOTHING);
