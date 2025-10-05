@@ -21,6 +21,8 @@ double sort(int* array, int size, char* alg) {
         shell_sort(array, size);
     else if (string_equal(alg, "quick"))
         quick_sort(array, 0, size - 1);
+    else if (string_equal(alg, "merge"))
+        merge_sort(array, 0, size - 1);
     else {
         fprintf(stderr, "ERROR: invalid algorithm: %s\n", alg);
         exit(EXIT_FAILURE);
