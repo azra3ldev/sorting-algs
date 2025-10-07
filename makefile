@@ -11,7 +11,7 @@ SRCS = $(wildcard $(SRC_DIR)/*/*.c)
 # sets executable
 OBJS = $(SRCS:.c=.o)
 OUT_DIR = bin
-TARGET = $(OUT_DIR)/sortingalgs
+TARGET = $(OUT_DIR)/sort
 
 # configures the compilation of target
 $(TARGET): $(OBJS)

@@ -11,6 +11,11 @@ void counting_sort(int* array, int size) {
             max = array[i];
     }
 
+    if (min < 0) {
+        fprintf(stderr, "ERROR: sort by counting doesn't support negative numbers.\n");
+        exit(EXIT_FAILURE);
+    }
+
     int range = max - min; // size of the auxiliary array
     int* count_array = (int*) calloc(range + 1, sizeof(int)); // needs to be calloc to fill everything with zeros
 
