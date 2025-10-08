@@ -12,6 +12,7 @@
 #include "../function/quick.h"
 #include "../function/merge.h"
 #include "../function/heap.h"
+#include "../function/intro.h"
 #include "../function/counting.h"
 
 double sort(int* array, int size, char* alg);

@@ -29,6 +29,7 @@ void validate_args(int argc, char* argv[]) {
         printf("merge      | n*logn | n*logn | n*logn |  1,000,000\n");
         printf("heap       | n*logn | n*logn | n*logn |  1,000,000\n");
         printf("quick      | n*logn | n*logn |    n^2 |  2,000,000\n");
+        printf("intro      |      n | n*logn | n*logn |  2,000,000\n");
         printf("counting   |      n | n + r* |     2n |  5,000,000\n\n");
         printf("* number range.\n");
         printf("** complexity in big o notation.\n");

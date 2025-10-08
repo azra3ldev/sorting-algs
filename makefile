@@ -2,7 +2,8 @@
 
 # compiler configuration
 CC = gcc
-CFLAGS = -Wall -Wextra -O2 -DNDEBUG
+CFLAGS = -Wall -Wextra -O2 -DNDEBUG -lm
+# -lm is for math library
 
 # finds all source files
 SRC_DIR = code
@@ -22,3 +23,6 @@ $(TARGET): $(OBJS)
 # configures how the conversion from c file to object works
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+clean:
+	rm $(OBJS)

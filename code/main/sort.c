@@ -27,6 +27,8 @@ double sort(int* array, int size, char* alg) {
         merge_sort(array, size);
     else if (string_equal(alg, "heap"))
         heap_sort(array, size);
+    else if (string_equal(alg, "intro"))
+        intro_sort(array, size);
     else if (string_equal(alg, "counting"))
         counting_sort(array, size);
     else {
