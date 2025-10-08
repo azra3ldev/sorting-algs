@@ -13,6 +13,8 @@ double sort(int* array, int size, char* alg) {
     }
     else if (string_equal(alg, "bubble"))
         bubble_sort(array, size);
+    else if (string_equal(alg, "cocktail"))
+        cocktail_sort(array, size);
     else if (string_equal(alg, "selection"))
         selection_sort(array, size);
     else if (string_equal(alg, "insertion"))

@@ -20,8 +20,9 @@ void validate_args(int argc, char* argv[]) {
         printf("output_file: file that will receive the sorted array.\n\n");
         printf("algorithm  |  best  | medium | worst**|     max***\n");
         printf("-----------|--------|--------|--------|-----------\n");
-        printf("bogo       |      n |     n! |      ∞ |         12\n");
+        printf("bogo       |      n |   n*n! |      ∞ |         12\n");
         printf("bubble     |      n |     n² |     n² |     50,000\n");
+        printf("cocktail   |      n |     n² |     n² |    100,000\n");
         printf("selection  |     n² |     n² |     n² |    100,000\n");
         printf("insertion  |      n |     n² |     n² |    200,000\n");
         printf("shell      | n*logn | n^1.25 |  n^1.5 |  1,000,000\n");
