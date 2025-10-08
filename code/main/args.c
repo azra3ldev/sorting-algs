@@ -27,6 +27,7 @@ void validate_args(int argc, char* argv[]) {
         printf("insertion  |      n |     n² |     n² |    200,000\n");
         printf("shell      | n*logn | n^1.25 |  n^1.5 |  1,000,000\n");
         printf("merge      | n*logn | n*logn | n*logn |  1,000,000\n");
+        printf("heap       | n*logn | n*logn | n*logn |  1,000,000\n");
         printf("quick      | n*logn | n*logn |    n^2 |  2,000,000\n");
         printf("counting   |      n | n + r* |     2n |  5,000,000\n\n");
         printf("* number range.\n");
