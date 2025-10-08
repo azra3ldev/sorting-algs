@@ -1,0 +1,21 @@
+num_amount: amount of numbers the program will receive.
+input_file: file that contains the array (text, values separated by newline).
+output_file: file that will receive the sorted array.
+
+algorithm  |  best  | medium |  worst²|        max³
+-----------|--------|--------|--------|-----------
+bogo       |      n |   n*n! |      ∞ |         12
+bubble     |      n |    n^2 |    n^2 |     50,000
+cocktail   |      n |    n^2 |    n^2 |    100,000
+selection  |    n^2 |    n^2 |    n^2 |    100,000
+insertion  |      n |    n^2 |    n^2 |    200,000
+shell      | n*logn | n^1.25 |  n^1.5 |  1,000,000
+merge      | n*logn | n*logn | n*logn |  1,000,000
+heap       | n*logn | n*logn | n*logn |  1,000,000
+quick      | n*logn | n*logn |    n^2 |  2,000,000
+intro      |      n | n*logn | n*logn |  2,000,000
+counting   |      n |  n + r¹|     2n |  5,000,000
+
+1. number range.
+2. complexity in big o notation.
+3. recommended maximum array size, to avoid taking forever.

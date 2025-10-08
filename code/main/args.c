@@ -15,25 +15,11 @@ void validate_args(int argc, char* argv[]) {
     }
     if (argc == 2 && (string_equal(argv[1], "--help") || string_equal(argv[1], "-h"))) {
         printf("usage: " NAME " <algorithm> <num_amount> <input_file> <output_file>\n\n");
-        printf("num_amount: amount of numbers the program will receive.\n");
-        printf("input_file: file that contains the array (text, values separated by newline).\n");
-        printf("output_file: file that will receive the sorted array.\n\n");
-        printf("algorithm  |  best  | medium | worst**|     max***\n");
-        printf("-----------|--------|--------|--------|-----------\n");
-        printf("bogo       |      n |   n*n! |      ∞ |         12\n");
-        printf("bubble     |      n |     n² |     n² |     50,000\n");
-        printf("cocktail   |      n |     n² |     n² |    100,000\n");
-        printf("selection  |     n² |     n² |     n² |    100,000\n");
-        printf("insertion  |      n |     n² |     n² |    200,000\n");
-        printf("shell      | n*logn | n^1.25 |  n^1.5 |  1,000,000\n");
-        printf("merge      | n*logn | n*logn | n*logn |  1,000,000\n");
-        printf("heap       | n*logn | n*logn | n*logn |  1,000,000\n");
-        printf("quick      | n*logn | n*logn |    n^2 |  2,000,000\n");
-        printf("intro      |      n | n*logn | n*logn |  2,000,000\n");
-        printf("counting   |      n | n + r* |     2n |  5,000,000\n\n");
-        printf("* number range.\n");
-        printf("** complexity in big o notation.\n");
-        printf("*** recommended maximum array size, to avoid taking forever.\n");
+        FILE* message = fopen("static/help.txt", "r");
+        char buffer[256];
+        while(fgets(buffer, 256, message))
+            printf("%s", buffer);
+        fclose(message);
         exit(EXIT_NOTHING);
     }
     if (argc == 2 && (string_equal(argv[1], "--version") ||string_equal(argv[1], "-v"))) {
