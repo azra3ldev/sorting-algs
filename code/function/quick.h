@@ -14,4 +14,6 @@ int quick_sort_partition(int* array, int begin, int end);
 /*
  * recursive quicksort fucntion.
  */
-void quick_sort(int* array, int begin, int end);
+void quick_sort_recursive(int* array, int begin, int end);
+
+void quick_sort(int* array, int size);

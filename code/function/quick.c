@@ -26,11 +26,15 @@ int quick_sort_partition(int* array, int begin, int end) {
     return i; // returns the partition index
 }
 
-void quick_sort(int* array, int begin, int end) {
+void quick_sort_recursive(int* array, int begin, int end) {
     if (begin >= end) return;
 
     int pivot = quick_sort_partition(array, begin, end);
 
-    quick_sort(array, begin, pivot - 1);
-    quick_sort(array, pivot + 1, end);
+    quick_sort_recursive(array, begin, pivot - 1);
+    quick_sort_recursive(array, pivot + 1, end);
+}
+
+void quick_sort(int* array, int size) {
+    quick_sort_recursive(array, 0, size - 1);
 }

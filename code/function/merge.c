@@ -30,13 +30,17 @@ void merge_sort_partition(int* array, int left, int mid, int right) {
     free(right_array);
 }
 
-void merge_sort(int* array, int left, int right) {
+void merge_sort_recursive(int* array, int left, int right) {
     if (left >= right) return;
 
     int mid = left + (right - left) / 2;
 
-    merge_sort(array, left, mid);
-    merge_sort(array, mid + 1, right);
+    merge_sort_recursive(array, left, mid);
+    merge_sort_recursive(array, mid + 1, right);
 
     merge_sort_partition(array, left, mid, right);
+}
+
+void merge_sort(int* array, int size) {
+    merge_sort_recursive(array, 0, size - 1);
 }

@@ -22,9 +22,9 @@ double sort(int* array, int size, char* alg) {
     else if (string_equal(alg, "shell"))
         shell_sort(array, size);
     else if (string_equal(alg, "quick"))
-        quick_sort(array, 0, size - 1);
+        quick_sort(array, size);
     else if (string_equal(alg, "merge"))
-        merge_sort(array, 0, size - 1);
+        merge_sort(array, size);
     else if (string_equal(alg, "heap"))
         heap_sort(array, size);
     else if (string_equal(alg, "counting"))
