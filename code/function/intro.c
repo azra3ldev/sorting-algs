@@ -1,13 +1,13 @@
 #include "intro.h"
 
 void intro_sort(int* array, int size) {
-    int max_depth = sqrt(size) * 2;
+    int max_depth = log2(size) * 2;
     intro_sort_recursive(array, 0, size - 1, max_depth);
 }
 
 void intro_sort_recursive(int* array, int begin, int end, int max_depth) {
     int size = end - begin + 1;
-    if (size < 16)
+    if (size < 64)
         insertion_sort(&array[begin], size);
     else if (max_depth == 0)
         heap_sort(&array[begin], size);
