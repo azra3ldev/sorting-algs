@@ -33,3 +33,5 @@ bool is_sorted(int* array, int size);
  * returns true if two strings are equal.
  */
 bool string_equal(char* s1, char* s2);
+
+void print_text_file(char* path);

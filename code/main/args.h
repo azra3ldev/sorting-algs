@@ -1,6 +1,7 @@
 #pragma once
 
 #include "main.h"
+#include "../extra/aux.h"
 
 void validate_args(int argc, char* argv[]);
 int parse_amount_arg(char* amount_arg);

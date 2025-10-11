@@ -7,29 +7,27 @@
  */
 void validate_args(int argc, char* argv[]) {
     if(argc == 1) {
-        printf(NAME ", by alza3ldev, version: " VERSION "\n\n");
-        printf("this program uses sorting algorithms to sort integer arrays.\n\n");
-        printf("usage: " NAME " <algorithm> <num_amount> <input_file> <output_file>\n");
-        printf("try --help or -h for more information.\n");
+        print_text_file("static/version.txt");
+        putchar('\n');
+        print_text_file("static/description.txt");
+        putchar('\n');
+        print_text_file("static/syntax.txt");
         exit(EXIT_NOTHING);
     }
     if (argc == 2 && (string_equal(argv[1], "--help") || string_equal(argv[1], "-h"))) {
-        printf("usage: " NAME " <algorithm> <num_amount> <input_file> <output_file>\n\n");
-        FILE* message = fopen("static/help.txt", "r");
-        char buffer[256];
-        while(fgets(buffer, 256, message))
-            printf("%s", buffer);
-        fclose(message);
+        print_text_file("static/syntax.txt");
+        putchar('\n');
+        print_text_file("static/info.txt");
         exit(EXIT_NOTHING);
     }
     if (argc == 2 && (string_equal(argv[1], "--version") ||string_equal(argv[1], "-v"))) {
-        printf("version: " VERSION "\n");
+        print_text_file("static/version.txt");
         exit(EXIT_NOTHING);
     }
     if (argc != 5) {
         fprintf(stderr, "ERROR: invalid syntax.\n");
-        printf("usage: " NAME " <algorithm> <num_amount> <input_file> <output_file>\n");
-        printf("try --help or -h for more information.\n");
+        putchar('\n');
+        print_text_file("static/syntax.txt");
         exit(EXIT_FAILURE);
     }
 }

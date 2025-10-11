@@ -11,6 +11,3 @@
  * so the program din't end with sucess nor with failure.
  */
 #define EXIT_NOTHING 2
-
-#define NAME "sortingalgs"
-#define VERSION "1.0.0"

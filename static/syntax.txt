@@ -1,0 +1,3 @@
+sort --help
+sort --version
+sort <algorithm> <num_amount> <input_file> <output_file>
