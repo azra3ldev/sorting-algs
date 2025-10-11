@@ -1,7 +1,8 @@
-num_amount: amount of numbers the program will receive.
-input_file: file that contains the array (text, values separated by newline).
-output_file: file that will receive the sorted array.
+# Sortingalgs
+## Introduction
+The goal of this program is to test and learn sorting algorithms, since it only sorts simple integers from text files.
 
+## Algorithms
 | Algorithm | Best Case¹| Average Case | Worst Case | Time Taken² |
 |-----------|-----------|--------------|------------|-------------|
 | bogo      | n         | n*n!         | ∞          | -           |
@@ -16,7 +17,8 @@ output_file: file that will receive the sorted array.
 | intro     | n         | n*log(n)     | n*log(n)   |  0.005506   |
 | tim       | n         | n*log(n)     | n*log(n)   |  0.006378   |
 | counting³ | n + r     | n + r        | n + r      |  0.001140   |
-
+---
 1. complexity in big O notation
 2. test with 100,000 random numbers, in seconds
 3. r = number range
+---

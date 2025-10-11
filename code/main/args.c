@@ -1,10 +1,5 @@
 #include "args.h"
 
-/*
- * checks if the arguments are valid and exits programs if not.
- * prints program usage in case no args provided or flag --help used.
- * prints version if requested.
- */
 void validate_args(int argc, char* argv[]) {
     if(argc == 1) {
         print_text_file("static/version.txt");
@@ -32,9 +27,6 @@ void validate_args(int argc, char* argv[]) {
     }
 }
 
-/*
- * gets the argument "amount" and returns it as integer if valid, else closes program.
- */
 int parse_amount_arg(char* amount_arg) {
     int amount = atoi(amount_arg);
     if (amount < 1) {
@@ -45,9 +37,6 @@ int parse_amount_arg(char* amount_arg) {
     return amount;
 }
 
-/*
- * parses "input_file" arg and returns it as FILE* if valid, else closes program.
- */
 FILE* parse_input_file(char* path) {
     FILE* file = fopen(path, "r");
     if (!file) {
@@ -58,9 +47,6 @@ FILE* parse_input_file(char* path) {
     return file;
 }
 
-/*
- * parses "output_file" arg and returns it as FILE* if valid, else closes program.
- */
 FILE* parse_output_file(char* path) {
     FILE* file = fopen(path, "w");
     if (!file) {

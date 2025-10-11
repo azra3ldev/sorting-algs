@@ -7,7 +7,7 @@
 #include "sort.h"
 
 /*
- * this is for if the user just calls the program to see help or version, meaning there was no sorting and...
- * so the program din't end with sucess nor with failure.
+ * this is for if the user just calls the program to see help or version,
+ * meaning there was no sorting, so the program din't end with sucess nor with failure.
  */
 #define EXIT_NOTHING 2

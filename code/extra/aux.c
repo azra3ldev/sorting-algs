@@ -1,8 +1,5 @@
 #include "aux.h"
 
-// this is a file with auxiliary functions that will be shared with many files.
-// it doesn't have a main() function, it's meant to be used with other source files.
-
 void swap(int* a, int* b) {
     int temp = *a;
     *a = *b;

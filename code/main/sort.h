@@ -16,4 +16,7 @@
 #include "../function/tim.h"
 #include "../function/counting.h"
 
+/*
+ * sorts the arrray with specified algorithm and returns time taken in seconds.
+ */
 double sort(int* array, int size, char* alg);

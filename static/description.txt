@@ -1,1 +1,1 @@
-this program uses sorting algorithms to sort integer arrays.
+this program sorts integer arrays from text files with the specified sorting algorithm.
