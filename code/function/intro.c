@@ -1,7 +1,7 @@
 #include "intro.h"
 
 void intro_sort(int* array, int size) {
-    int max_depth = log2(size) * 2;
+    int max_depth = log2(size) * 2; // this will be the limit of recursions. using sqrt() is also a good choice.
     intro_sort_recursive(array, 0, size - 1, max_depth);
 }
 
@@ -9,7 +9,7 @@ void intro_sort_recursive(int* array, int begin, int end, int max_depth) {
     int size = end - begin + 1;
     if (size < 64)
         insertion_sort(&array[begin], size);
-    else if (max_depth == 0)
+    else if (max_depth == 0) // if it reached too many recursions, switches to heap
         heap_sort(&array[begin], size);
     else {
         int pivot = quick_sort_partition(array, begin, end);
