@@ -10,7 +10,7 @@
 #include <string.h>
 
 /*
- * this function swaps two integers.
+ * this function swaps two integers with pointers.
  */
 void swap(int* a, int* b);
 
@@ -43,3 +43,8 @@ bool string_equal(char* s1, char* s2);
  * prints text from txt file located in path.
  */
 void print_text_file(char* path);
+
+/*
+ * checks if allocation was succesful and exits program if not.
+ */
+void validate_alloc(void* ptr);

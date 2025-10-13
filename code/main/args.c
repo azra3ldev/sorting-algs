@@ -1,7 +1,7 @@
 #include "args.h"
 
 void validate_args(int argc, char* argv[]) {
-    if(argc == 1) {
+    if(argc == 1) { // if no args privided, prints info
         print_text_file("static/version.txt");
         putchar('\n');
         print_text_file("static/description.txt");
@@ -9,17 +9,17 @@ void validate_args(int argc, char* argv[]) {
         print_text_file("static/syntax.txt");
         exit(EXIT_NOTHING);
     }
-    if (argc == 2 && (string_equal(argv[1], "--help") || string_equal(argv[1], "-h"))) {
+    if (argc == 2 && (string_equal(argv[1], "--help") || string_equal(argv[1], "-h"))) { // prints helps
         print_text_file("static/syntax.txt");
         putchar('\n');
         print_text_file("static/info.txt");
         exit(EXIT_NOTHING);
     }
-    if (argc == 2 && (string_equal(argv[1], "--version") ||string_equal(argv[1], "-v"))) {
+    if (argc == 2 && (string_equal(argv[1], "--version") ||string_equal(argv[1], "-v"))) { // prints version
         print_text_file("static/version.txt");
         exit(EXIT_NOTHING);
     }
-    if (argc != 5) {
+    if (argc != 5) { // syntax error
         fprintf(stderr, "ERROR: invalid syntax.\n");
         putchar('\n');
         print_text_file("static/syntax.txt");

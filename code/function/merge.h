@@ -2,6 +2,8 @@
 
 #include <stdlib.h>
 
+#include "../extra/aux.h"
+
 void merge_sort_partition(int* array, int left, int mid, int right);
 /*
  * recursive merge sort.

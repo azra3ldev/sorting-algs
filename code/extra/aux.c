@@ -8,6 +8,7 @@ void swap(int* a, int* b) {
 
 int* read_array(int size, FILE* input_src) {
     int* array = (int*) malloc(size * sizeof(int));
+    validate_alloc(array);
 
     for (int i = 0; i < size; i++) {
         fscanf(input_src, "%d", &array[i]);
@@ -46,4 +47,11 @@ void print_text_file(char* path) {
         printf("%s", buffer);
 
     fclose(text_file);
+}
+
+void validate_alloc(void* ptr) {
+    if (ptr == NULL) {
+        fprintf(stderr, "ERROR: memory allocation failed.\n");
+        exit(EXIT_FAILURE);
+    }
 }

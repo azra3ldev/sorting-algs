@@ -18,6 +18,7 @@ void counting_sort(int* array, int size) {
 
     int range = max - min; // size of the auxiliary array
     int* count_array = (int*) calloc(range + 1, sizeof(int)); // needs to be calloc to fill everything with zeros
+    validate_alloc(count_array);
 
     // count frequency of each number and stores it in count_array
     for (int i = 0; i < size; i++) {

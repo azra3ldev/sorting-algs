@@ -5,7 +5,9 @@ void merge_sort_partition(int* array, int left, int mid, int right) {
     int right_size = right - mid;
 
     int* left_array = (int*) malloc(left_size * sizeof(int));
+    validate_alloc(left_array);
     int* right_array = (int*) malloc(right_size * sizeof(int));
+    validate_alloc(right_array);
 
     for (int i = 0; i < left_size; i++)
         left_array[i] = array[left + i];
