@@ -15,6 +15,7 @@
 #include "../function/intro.h"
 #include "../function/tim.h"
 #include "../function/counting.h"
+#include "../function/bucket.h"
 
 /*
  * sorts the arrray with specified algorithm and returns time taken in seconds.

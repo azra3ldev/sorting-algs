@@ -18,6 +18,8 @@ double sort(int* array, int size, char* alg) {
         insertion_sort(array, size);
     else if (string_equal(alg, "shell"))
         shell_sort(array, size);
+    else if (string_equal(alg, "bucket"))
+        bucket_sort(array, size);
     else if (string_equal(alg, "quick"))
         quick_sort(array, size);
     else if (string_equal(alg, "merge"))

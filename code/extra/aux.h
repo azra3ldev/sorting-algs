@@ -48,3 +48,8 @@ void print_text_file(char* path);
  * checks if allocation was succesful and exits program if not.
  */
 void validate_alloc(void* ptr);
+
+/*
+ * difference between biggest and smallest element in array.
+ */
+int find_range(int* array, int size);

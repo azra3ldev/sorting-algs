@@ -55,3 +55,22 @@ void validate_alloc(void* ptr) {
         exit(EXIT_FAILURE);
     }
 }
+
+int find_range(int* array, int size) {
+    int min = array[0];
+    int max = array[0];
+    for (int i = 1; i < size; i++) {
+        if (array[i] < min)
+            min = array[i];
+
+        if (array[i]> max)
+            max = array[i];
+    }
+
+    if (min < 0) {
+        fprintf(stderr, "ERROR: sort by buckets doesn't support negative numbers.\n");
+        exit(EXIT_FAILURE);
+    }
+
+    return max - min;
+}
